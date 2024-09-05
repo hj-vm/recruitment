@@ -1,0 +1,30 @@
+---
+import Fb from "./fb.astro"
+import X from "./x.astro"
+import Youtube from "./youtube.astro"
+import Linkedin from "./linkedin.astro"
+---
+<footer class="h-[50dvh] bg-slate-950 flex flex-row justify-center items-center">
+<div class=" w-full flex flex-row justify-center items-start gap-32">
+    <div class="flex flex-col">
+        <h3 class="text-white font-orkney text-3xl mb-4">contact us</h3>
+        <p class="mb-2 text-white">Orkney Islands Council<br>School Place<br>Kirkwall<br>KW15 1NY</p>
+        <a class=" mb-2 text-white">01856 873535</a>
+        <a class="text-white" href="mailto:customerservice@orkney.gov.uk">customerservice@orkney.gov.uk</a>
+    </div>
+    <div class="flex flex-col">
+        <h3 class="text-white font-orkney text-3xl mb-4">quick links</h3>
+        <a class="text-white">About</a>
+        <a class="text-white">Vacancies</a>
+        <a class="text-white" href="https://orkney.gov.uk/privacy/">Privacy Policy</a>
+        <a class="text-white mb-4">Terms & Conditions</a>
+        <hr>
+        <div class="flex flex-row gap-4 my-4 items-center">
+            <Fb />
+            <Linkedin />
+            <Youtube />
+            <X />
+        </div>
+    </div>
+</div>
+</footer>

@@ -1,10 +1,11 @@
 ---
 import ViewTransitions from "astro/components/ViewTransitions.astro";
+import Footer from "../components/footer.astro";
 import '../output.css';
 const { pageTitle } = Astro.props;
 ---
 
-<html lang="en" class="scroll-smooth focus:scroll-auto">
+<html lang="en" class="scroll-smooth">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,7 +21,8 @@ const { pageTitle } = Astro.props;
       />
         <title>{pageTitle}</title>
     </head>
-    <body class="flex-col">
+    <body>
         <slot />
     </body>
+    <Footer />
 </html>

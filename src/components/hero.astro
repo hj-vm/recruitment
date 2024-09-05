@@ -1,7 +1,8 @@
 ---
+const { fromColor, toColor } = Astro.props;
 ---
 <div style="height: 50dvh;">
-    <div class="m-4 w-vw h-full rounded-2xl bg-gradient-to-r from-purple-600 to-blue-600">
+    <div class="m-4 w-vw h-full rounded-2xl" style={`background: linear-gradient(to right, ${fromColor}, ${toColor})`}>
         <slot />
     </div>
 </div>

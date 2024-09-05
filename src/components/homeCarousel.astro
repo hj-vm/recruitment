@@ -1,0 +1,49 @@
+---
+import CarouselArrow from './carouselArrow.astro'
+import { Image } from 'astro:assets';
+import hoyCliffs from '../images/hoyCliffs.webp';
+---
+<div class="h-[50dvh] m-4">
+    <div class="carousel size-full rounded-2xl">
+
+        <div id="slide1" class="carousel-item relative w-full justify-center">
+          <div class="m-16 flex flex-nowrap gap-12 justify-center items-center">
+            <div class="relative aspect-square h-full">
+              <Image src={hoyCliffs} alt="Scenic view of Hoy Cliffs" class="absolute h-full w-full object-cover rounded-xl"></Image>
+            </div>
+            <div class="w-1/2">
+              <h2 class="font-orkney text-4xl pb-4">we might be the smallest local authority in Scotland, but our dedication to our islands is unmatched</h2>
+              <p class="font-light text-2xl pb-2">Orkney Islands Council may serve one of the smallest populations in Scotland, but our commitment to our islands is as vast as the landscapes that surround us</p>
+              <p class="font-light text-2xl pb-2">We pride ourselves on providing exceptional services tailored to the needs of our communities, ensuring that life on our islands is enriched, sustainable, and resilient</p>
+              <p class="font-light text-2xl pb-2">Join us, and you'll be part of a team that values quality over quantity and community over conformity</p>
+            </div>
+          </div>
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide4" class="text-4xl rotate-180" aria-label="carousel back"><CarouselArrow /></a>
+            <a href="#slide2" class="text-4xl" aria-label="carousel forward"><CarouselArrow /></a>
+          </div>
+        </div>
+
+        <div id="slide2" class="carousel-item relative w-full">
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide1" class="text-4xl rotate-180" aria-label="carousel back"><CarouselArrow /></a>
+            <a href="#slide3" class="text-4xl" aria-label="carousel forward"><CarouselArrow /></a>
+          </div>
+        </div>
+
+        <div id="slide3" class="carousel-item relative w-full">
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide2" class="text-4xl rotate-180" aria-label="carousel back"><CarouselArrow /></a>
+            <a href="#slide4" class="text-4xl" aria-label="carousel forward"><CarouselArrow /></a>
+          </div>
+        </div>
+
+        <div id="slide4" class="carousel-item relative w-full">
+          <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <a href="#slide3" class="text-4xl rotate-180" aria-label="carousel back"><CarouselArrow /></a>
+            <a href="#slide1" class="text-4xl" aria-label="carousel forward"><CarouselArrow /></a>
+          </div>
+        </div>
+
+      </div>
+</div>

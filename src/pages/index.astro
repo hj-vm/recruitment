@@ -3,7 +3,7 @@ import Main from "../layouts/main.astro";
 import Hero from "../components/hero.astro";
 import HeroBtn from "../components/heroBtn.astro";
 import HeaderLight from "../components/headerLight.astro";
-import Carousel from "../components/carousel.astro";
+import HomeCarousel from "../components/homeCarousel.astro";
 import Testimonial from "../components/testimonial.astro";
 const pageTitle = "Home"; 
 const fromColor = "#d1669b";
@@ -15,12 +15,12 @@ const toColor = "#3838fc";
       <HeaderLight />
       <div class="my-24">
         <h1 transition:animate="slide" class="text-center font-orkney text-5xl md:text-9xl text-white">join our team</h1>
-        <p class="text-center	text-white font-light text-2xl">big challenges, big opportunities</p>
+        <p class="text-center	text-white font-light text-4xl">big challenges, big opportunities</p>
       </div>
       <div><HeroBtn /></div>
     </div>
   </Hero>
-  <Carousel />
+  <HomeCarousel />
   <Testimonial fromColor={fromColor} toColor={toColor} />
-  <Carousel />
+  <HomeCarousel />
 </Main>

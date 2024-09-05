@@ -12,9 +12,9 @@ const toColor = "#3838fc";
 <Main pageTitle={pageTitle}}>
   <Hero fromColor={fromColor} toColor={toColor}>
     <div class="size-full flex flex-col flex-wrap items-center place-content-evenly">
-      <HeaderLight transition:persist />
+      <HeaderLight />
       <div class="my-24">
-        <h1 class="text-center font-orkney text-5xl md:text-9xl text-white">join our team</h1>
+        <h1 transition:animate="slide" class="text-center font-orkney text-5xl md:text-9xl text-white">join our team</h1>
         <p class="text-center	text-white font-light text-2xl">big challenges, big opportunities</p>
       </div>
       <div><HeroBtn /></div>

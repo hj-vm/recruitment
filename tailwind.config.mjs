@@ -9,7 +9,11 @@ export default {
             },
         },
     },
+    daisyui: {
+        themes: [],
+     },
     plugins: [
         require('tailwind-scrollbar')({ nocompatible: true }),
+        require('daisyui'),
     ],
 }

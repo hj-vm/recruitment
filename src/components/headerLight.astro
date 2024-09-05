@@ -3,12 +3,12 @@ import { Image } from 'astro:assets';
 import oicw from '../images/oicw.webp';
 ---
 <div class="flex w-full items-center px-4">
-    <div class="flex justify-start h-full w-1/3 items-center"><Image src={oicw} alt="Orkney Islands Council" class="object-scale-down h-1/2"/></div>
-    <div class="flex flex-nowrap gap-4 w-1/3 justify-center">
-        <a href="/" class="text-white font-sourceSans3 text-xl font-light hover:font-md">Home</a>
-        <a href="/about" class="text-white font-sourceSans3 text-xl font-medium hover:font-semibold">About</a>
-        <a href="/resources" class="text-white font-sourceSans3 text-xl hover:font-semibold">Resources</a>
-        <a href="/vacancies" class="text-white font-sourceSans3 text-xl hover:font-semibold">Vacancies</a>
+    <a href="https://orkney.gov.uk" target="_blank" class="flex justify-start h-full w-1/3 items-center group hover:drop-shadow-lg transition-all"><Image src={oicw} alt="Orkney Islands Council" class="object-scale-down w-1/3 mx-4"/></a>
+    <div class="flex flex-nowrap gap-8 w-1/3 justify-center">
+        <a href="/" class="text-white text-xl font-light transition-all hover:font-normal hover:drop-shadow-lg focus:drop-shadow-lg focus:font-medium">Home</a>
+        <a href="/about" class="text-white text-xl font-light transition-all hover:font-normal hover:drop-shadow-lg focus:drop-shadow-lg focus:font-medium">About</a>
+        <a href="/resources" class="text-white text-xl font-light transition-all hover:font-normal hover:drop-shadow-lg focus:drop-shadow-lg focus:font-medium">Resources</a>
+        <a href="/vacancies" class="text-white text-xl font-light transition-all hover:font-normal hover:drop-shadow-lg focus:drop-shadow-lg focus:font-medium">Vacancies</a>
     </div>
     <div class="w-1/3"></div>
 </div>

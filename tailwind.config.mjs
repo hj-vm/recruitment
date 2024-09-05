@@ -5,6 +5,7 @@ export default {
         extend: {
             fontFamily: {
                 orkney: ['Orkney', 'sans-serif'],
+                sourceSans3: ['Source Sans Pro', 'sans-serif'],
             },
         },
     },

@@ -3,9 +3,14 @@ import Main from "../layouts/main.astro";
 import Hero from "../components/hero.astro";
 import HeroBtn from "../components/heroBtn.astro";
 import HeaderLight from "../components/headerLight.astro";
+import { fetchRssFeed } from '../utils/fetchRss.js';
+import RssCard from '../components/rssCard.astro';
+
 const pageTitle = "Vacancies";
 const fromColor = "#3838fc";
 const toColor = "#d1669b";
+const rssUrl = 'https://myjobscotland.gov.uk/api/v1/rss?alias=councils/orkney-islands-council/jobs/rss';
+const items = await fetchRssFeed(rssUrl);
 ---
 <Main pageTitle={pageTitle}}>
     <Hero fromColor={fromColor} toColor={toColor}>
@@ -18,5 +23,13 @@ const toColor = "#d1669b";
         <div><HeroBtn /></div>
       </div>
     </Hero>
-    <div class="h-[50dvh] w-full"></div>
+
+    <div class="m-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {items.map(item => (
+          <RssCard {...item} />
+        ))}
+      </div>
+    </div>
+
 </Main>

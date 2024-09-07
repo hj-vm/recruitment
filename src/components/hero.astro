@@ -1,8 +1,18 @@
 ---
-const { fromColor, toColor } = Astro.props;
+import HeaderLight from "./headerLight.astro";
+import Surprise from "./surprise.svelte";
+
+const { fromColor, toColor, heroText, heroTagline } = Astro.props;
 ---
 <div style="height: 50dvh;">
     <div class="m-4 w-vw h-full rounded-2xl" style={`background: linear-gradient(to right, ${fromColor}, ${toColor})`}>
-        <slot />
+        <div class="size-full flex flex-col flex-wrap items-center place-content-evenly">
+            <HeaderLight />
+            <div class="my-24">
+              <h1 transition:animate="slide" class="text-center font-orkney text-5xl md:text-9xl text-white">{heroText}</h1>
+              <p class="text-center	text-white font-light text-4xl">{heroTagline}</p>
+            </div>
+            <div><Surprise client:load/></div>
+          </div>
     </div>
 </div>

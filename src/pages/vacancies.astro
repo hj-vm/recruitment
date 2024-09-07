@@ -1,8 +1,6 @@
 ---
 import Main from "../layouts/main.astro";
 import Hero from "../components/hero.astro";
-import HeroBtn from "../components/heroBtn.astro";
-import HeaderLight from "../components/headerLight.astro";
 import { fetchRssFeed } from '../utils/fetchRss.js';
 import RssCard from '../components/rssCard.astro';
 
@@ -11,19 +9,11 @@ const fromColor = "#3838fc";
 const toColor = "#d1669b";
 const rssUrl = 'https://myjobscotland.gov.uk/api/v1/rss?alias=councils/orkney-islands-council/jobs/rss';
 const items = await fetchRssFeed(rssUrl);
+const heroText = "find a role";
+const heroTagline = "big challenges, big opportunities";
 ---
 <Main pageTitle={pageTitle}}>
-    <Hero fromColor={fromColor} toColor={toColor}>
-      <div class="size-full flex flex-col flex-wrap items-center place-content-evenly">
-        <HeaderLight />
-        <div class="my-24">
-          <h1 transition:animate="slide" class="text-center font-orkney text-5xl md:text-9xl text-white">find a role</h1>
-          <p class="text-center	text-white font-light text-4xl">big challenges, big opportunities</p>
-        </div>
-        <div><HeroBtn /></div>
-      </div>
-    </Hero>
-
+  <Hero fromColor={fromColor} toColor={toColor} heroText={heroText} heroTagline={heroTagline} />
     <div class="m-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {items.map(item => (

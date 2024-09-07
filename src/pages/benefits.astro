@@ -1,22 +1,14 @@
 ---
 import Main from "../layouts/main.astro";
 import Hero from "../components/hero.astro";
-import HeroBtn from "../components/heroBtn.astro";
-import HeaderLight from "../components/headerLight.astro";
+
 const pageTitle = "Benefits";
 const fromColor = "#94c7c3";
 const toColor = "#00b000";
+const heroText = "what we offer";
+const heroTagline = "big challenges, big opportunities";
 ---
 <Main pageTitle={pageTitle}}>
-    <Hero fromColor={fromColor} toColor={toColor}>
-      <div class="size-full flex flex-col flex-wrap items-center place-content-evenly">
-        <HeaderLight />
-        <div class="my-24">
-          <h1 transition:animate="slide" class="text-center font-orkney text-5xl md:text-9xl text-white">what we offer</h1>
-          <p class="text-center	text-white font-light text-4xl">big challenges, big opportunities</p>
-        </div>
-        <div><HeroBtn /></div>
-      </div>
-    </Hero>
+  <Hero fromColor={fromColor} toColor={toColor} heroText={heroText} heroTagline={heroTagline} />
     <div class="h-[50dvh] w-full"></div>
 </Main>

@@ -1,8 +1,22 @@
 ---
 const { title, link, pubDate, contentSnippet } = Astro.props;
+const locationMatch = contentSnippet.match(/Location:\s*([^;]*)/);
+const salaryMatch = contentSnippet.match(/Salary:\s*([^;]*)/);
+const closingDateMatch = contentSnippet.match(/Closing date:\s*(.*)/);
+const location = locationMatch ? locationMatch[1].trim() : 'N/A';
+const salary = salaryMatch ? salaryMatch[1].trim() : 'N/A';
+const closingDate = closingDateMatch ? closingDateMatch[1].trim() : 'N/A';
+
+// Extract the ORK***** tag from the title
+const tagMatch = title.match(/(ORK\d{5})/);
+const tag = tagMatch ? tagMatch[0] : '';
+const cleanTitle = tag ? title.replace(` - ${tag}`, '').trim() : title;
 ---
 <a href={link} target="_blank" rel="noopener noreferrer" class="card border rounded-lg p-4 hover:shadow-lg transition-all hover:scale-[1.02]">
-    <h2 class="text-[#1e1e1e] text-xl font-bold mb-2">{title}</h2>
-    <p class="text-sm text-gray-500 mb-2">{new Date(pubDate).toLocaleDateString()}</p>
-    <p class="text-base">{contentSnippet}</p>
-</a> 
+    <h2 class="text-[#1e1e1e] text-xl font-orknwy mb-2">{cleanTitle}</h2>
+    {tag && <p class="text-sm text-gray-500 mb-2">{tag}</p>}
+    <!-- <p class="text-sm text-gray-500 mb-2">{new Date(pubDate).toLocaleDateString()}</p> -->
+    <p class="text-base mt-2"><strong>Location:</strong> {location}</p>
+    <p class="text-base"><strong>Salary:</strong> {salary}</p>
+    <p class="text-base mt-4"><strong>Closing Date:</strong> {closingDate}</p>
+</a>

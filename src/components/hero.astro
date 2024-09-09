@@ -5,15 +5,15 @@ import Nav from "./nav.astro";
 
 const { fromColor, toColor, heroText, heroTagline } = Astro.props;
 ---
-<div class="h-fit md:h-[50dvh]">
+<div class="h-[100vw] md:h-[50vh]">
     <div class="m-4 w-vw h-full rounded-2xl" style={`background: linear-gradient(to right, ${fromColor}, ${toColor})`}>
-        <div class="size-full flex flex-col flex-wrap items-center place-content-evenly">
+        <div class="size-full flex flex-col flex-wrap items-center place-content-between">
             <Nav />
-            <div class="my-24">
+            <div class="mx-4">
               <h1 transition:animate="slide" class="text-center font-orkney text-5xl md:text-9xl text-white">{heroText}</h1>
-              <p class="text-center	text-white font-light text-lg md:text-4xl">{heroTagline}</p>
+              <p class="text-balance text-center	text-white font-light text-lg md:text-4xl">{heroTagline}</p>
             </div>
             <div><Surprise client:load/></div>
-          </div>
+        </div>
     </div>
 </div>

@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import oicw from '../images/oicw.webp';
 ---
-<div class="navbar bg-base-100" style="align-items: start !important;">
+<div class="navbar bg-base-100 place-self-start" style="apgn-items: start !important;">
     <div class="navbar-start">
       <div class="dropdown dropdown-hover">
         <div tabindex="0" role="button" class="btn btn-ghost btn-circle transition-all hover:scale-[1.05] hover:drop-shadow-lg">
@@ -13,26 +13,24 @@ import oicw from '../images/oicw.webp';
             viewBox="0 0 24 24"
             stroke="white">
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              stroke-pnecap="round"
+              stroke-pnejoin="round"
               stroke-width="2"
               d="M4 6h16M4 12h16M4 18h7" />
           </svg>
         </div>
-        <ul
-          tabindex="0"
-          class="menu menu-sm dropdown-content backdrop-blur-lg bg-[#1e1e1e] bg-opacity-20 rounded-box z-[1] w-fit p-2">
-          <li><a href="/recruitment" class="text-white border-none text-lg font-light transition-all hover:font-normal hover:drop-shadow-lg">Homepage</a></li>
-          <li><a href="/recruitment/about" class="text-white text-lg font-light transition-all hover:font-normal hover:drop-shadow-lg">About</a></li>
-          <li><a href="/recruitment/resources" class="text-white border-none text-lg font-light transition-all hover:font-normal hover:drop-shadow-lg" >Resources</a></li>
-          <li><a href="/recruitment/benefits" class="text-white border-none text-lg font-light transition-all hover:font-normal hover:drop-shadow-lg" >Benefits</a></li>
-          <li><a href="/recruitment/vacancies" class="text-white border-none text-lg font-light transition-all hover:font-normal hover:drop-shadow-lg" >Vacancies</a></li>
-        </ul>
+        <div tabindex="0" class="menu menu-sm dropdown-content backdrop-blur-lg md:backdrop-blur-none bg-[#1e1e1e] bg-opacity-20 md:bg-opacity-0 rounded-box z-[1] w-fit p-4">
+          <a href="/recruitment" class="text-white border-none text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg">Home</a>
+          <a href="/recruitment/about" class="text-white text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg">About</a>
+          <a href="/recruitment/resources" class="text-white border-none text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg" >Resources</a>
+          <a href="/recruitment/benefits" class="text-white border-none text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg" >Benefits</a>
+          <a href="/recruitment/vacancies" class="text-white border-none text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg" >Vacancies</a>
+      </div>
       </div>
     </div>
 
     <div class="navbar-center">
-        <a href="https://orkney.gov.uk" target="_blank" class="group"><Image src={oicw} alt="Orkney Islands Council" class="object-scale-down w-36 md:w-56 transition-all group-hover:scale-[1.02] group-hover:drop-shadow-lg"/></a>
+        <a href="https://orkney.gov.uk" target="_blank" class="group"><Image src={oicw} alt="Orkney Islands Council" class="object-scale-down w-32 mt-2 md:mt-0 md:w-56 transition-all group-hover:scale-[1.02] group-hover:drop-shadow-lg"/></a>
     </div>
 
     <div class="navbar-end">
@@ -44,8 +42,8 @@ import oicw from '../images/oicw.webp';
           viewBox="0 0 24 24"
           stroke="currentColor">
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            stroke-pnecap="round"
+            stroke-pnejoin="round"
             stroke-width="2"
             d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
@@ -59,8 +57,8 @@ import oicw from '../images/oicw.webp';
             viewBox="0 0 24 24"
             stroke="currentColor">
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              stroke-pnecap="round"
+              stroke-pnejoin="round"
               stroke-width="2"
               d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
           </svg>

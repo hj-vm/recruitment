@@ -18,4 +18,6 @@
     });
 </script>
 
-<button class="group mb-4 w-fit px-4 pb-1 rounded-full  md:text-xl border-white border-solid border transition-all hover:transition-all hover:shadow-lg"><a class="text-white font-light transition-all group-hover:font-normal group-hover:drop-shadow-lg" href={randomLink}>surprise me</a></button>
+<div class="navbar">
+    <button class="group w-fit px-4 pb-1 rounded-full  md:text-xl border-white border-solid border transition-all hover:transition-all hover:shadow-lg"><a class="text-white font-light transition-all group-hover:font-normal group-hover:drop-shadow-lg" href={randomLink}>surprise me</a></button>
+</div>

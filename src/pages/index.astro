@@ -5,6 +5,7 @@ import HomeCarousel from "../components/homeCarousel.astro";
 import Testimonial from "../components/testimonial.astro";
 import { fetchRssFeed } from '../utils/fetchRss.js';
 import RssCard from '../components/rssCard.astro';
+import MobNav from "../components/mobNav.astro";
 
 const rssUrl = 'https://myjobscotland.gov.uk/api/v1/rss?alias=councils/orkney-islands-council/jobs/rss';
 const items = await fetchRssFeed(rssUrl);

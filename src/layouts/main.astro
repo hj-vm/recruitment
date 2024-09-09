@@ -2,6 +2,8 @@
 import ViewTransitions from "astro/components/ViewTransitions.astro";
 import Footer from "../components/footer.astro";
 import '../output.css';
+import MobNav from "../components/mobNav.astro";
+
 const { pageTitle } = Astro.props;
 ---
 
@@ -26,4 +28,5 @@ const { pageTitle } = Astro.props;
         <slot />
     </body>
     <Footer />
+    <!-- <MobNav /> -->
 </html>

@@ -5,7 +5,6 @@ import HomeCarousel from "../components/homeCarousel.astro";
 import Testimonial from "../components/testimonial.astro";
 import { fetchRssFeed } from '../utils/fetchRss.js';
 import RssCard from '../components/rssCard.astro';
-import MobNav from "../components/mobNav.astro";
 
 const rssUrl = 'https://myjobscotland.gov.uk/api/v1/rss?alias=councils/orkney-islands-council/jobs/rss';
 const items = await fetchRssFeed(rssUrl);
@@ -20,13 +19,18 @@ const heroTagline = "big challenges, big opportunities";
   <HomeCarousel />
   <Testimonial fromColor={fromColor} toColor={toColor} />
   <div class="flex flex-col items-center mx-4 my-10 gap-4">
-    <a href="/recruitment/vacancies" class="flex flex-row flex-nowrap items-center justify-center gap-4 w-fit transition-all hover:scale-[1.02]">        <h2 class="text-4xl font-orkney text-center align-center text-[#1e1e1e]">latest vacancies</h2>
+    <a href="/recruitment/vacancies" class="flex flex-row flex-nowrap items-center justify-center gap-4 w-fit transition-all hover:scale-[1.02]"><h2 class="text-3xl md:text-4xl font-orkney text-center align-center text-[#1e1e1e]">latest vacancies</h2>
       <!-- <svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.375 1.75L12.625 13L1.375 24.25" stroke="#1E1E1E" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
        </svg> -->
     </a>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+    <div class="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
       {items.slice(0, 6).map(item => (
+        <RssCard {...item} />
+        ))}
+    </div>
+    <div class="md:hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+      {items.slice(0, 3).map(item => (
         <RssCard {...item} />
         ))}
     </div>

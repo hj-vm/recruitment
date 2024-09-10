@@ -2,8 +2,8 @@
 import { Image } from 'astro:assets';
 import oicw from '../images/oicw.webp';
 ---
-<div class="navbar bg-base-100 place-self-start" style="apgn-items: start !important;">
-    <div class="navbar-start">
+<div class="navbar bg-base-100 place-self-start md:mt-2">
+    <div class="navbar-start md:ml-2">
       <div class="dropdown dropdown-hover">
         <div tabindex="0" role="button" class="btn btn-ghost btn-circle transition-all hover:scale-[1.05] hover:drop-shadow-lg">
           <svg
@@ -19,18 +19,18 @@ import oicw from '../images/oicw.webp';
               d="M4 6h16M4 12h16M4 18h7" />
           </svg>
         </div>
-        <div tabindex="0" class="menu menu-sm dropdown-content backdrop-blur-lg md:backdrop-blur-none bg-[#1e1e1e] bg-opacity-20 md:bg-opacity-0 rounded-box z-[1] w-fit p-4">
-          <a href="/recruitment" class="text-white border-none text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg">Home</a>
-          <a href="/recruitment/about" class="text-white text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg">About</a>
-          <a href="/recruitment/resources" class="text-white border-none text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg" >Resources</a>
-          <a href="/recruitment/benefits" class="text-white border-none text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg" >Benefits</a>
-          <a href="/recruitment/vacancies" class="text-white border-none text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg" >Vacancies</a>
+        <div tabindex="0" class="menu menu-sm dropdown-content backdrop-blur-lg md:backdrop-blur-none bg-[#1e1e1e] bg-opacity-20 md:bg-opacity-0 rounded-box z-[1] w-32 ml-4 mt-4 md:mt-0 p-4 md:p-0">
+          <a href="/recruitment" class="text-white border-none text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg" aria-label="Home">Home</a>
+          <a href="/recruitment/about" class="text-white text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg" aria-label="About">About</a>
+          <a href="/recruitment/resources" class="text-white border-none text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg" aria-label="Resources">Resources</a>
+          <a href="/recruitment/benefits" class="text-white border-none text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg" aria-label="Benefits">Benefits</a>
+          <a href="/recruitment/vacancies" class="text-white border-none text-lg font-pght transition-all font-light hover:font-normal hover:drop-shadow-lg" aria-label="Vacancies">Vacancies</a>
       </div>
       </div>
     </div>
 
     <div class="navbar-center">
-        <a href="https://orkney.gov.uk" target="_blank" class="group"><Image src={oicw} alt="Orkney Islands Council" class="object-scale-down w-32 mt-2 md:mt-0 md:w-56 transition-all group-hover:scale-[1.02] group-hover:drop-shadow-lg"/></a>
+        <a href="https://orkney.gov.uk" target="_blank" aria-label="Orkney Islands Council website" class="group"><Image src={oicw} alt="Orkney Islands Council" class="object-scale-down w-32 mt-2 md:mt-0 md:w-52 transition-all group-hover:scale-[1.02] group-hover:drop-shadow-lg"/></a>
     </div>
 
     <div class="navbar-end">

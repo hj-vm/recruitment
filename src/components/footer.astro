@@ -3,6 +3,8 @@ import Fb from "./fb.astro"
 import X from "./x.astro"
 import Youtube from "./youtube.astro"
 import Linkedin from "./linkedin.astro"
+import Phone from "./phone.astro"
+import Mail from "./email.astro"
 ---
 <footer class="h-fit md:h-[50dvh] bg-[#1e1e1e] flex flex-col justify-center items-center">
     <div class="h-1/5"></div>
@@ -28,8 +30,9 @@ import Linkedin from "./linkedin.astro"
         </div>
     </div>
 </div>
+
 <div class="md:h-0 md:hidden flex flex-col">
-    <a href="https://orkney.gov.uk/privacy/" aria-label="Privacy Policy" target="_blank" class="text-center transition-all text-white font-light hover:font-normal focus:font-medium mt-2" href="https://orkney.gov.uk/privacy/">Privacy Policy</a>
+    <a href="https://orkney.gov.uk/privacy/" aria-label="Privacy Policy" target="_blank" class="text-center transition-all text-white font-light hover:font-normal focus:font-medium mt-4" href="https://orkney.gov.uk/privacy/">Privacy Policy</a>
     <a aria-label="Terms and Conditions" class="transition-all text-white font-light hover:font-normal focus:font-medium text-center">Terms & Conditions</a>
     <hr class="mt-2">
     <div class="flex flex-row gap-4 my-4 items-center">
@@ -37,8 +40,10 @@ import Linkedin from "./linkedin.astro"
         <Linkedin />
         <Youtube />
         <X />
+        <Phone />
+        <Mail />
     </div>
     <hr class="mb-2">
 </div>
-<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/" target="_blank" class="transition-all text-gray-300 hover:text-white mb-2 md:mb-0">© Orkney Islands Council 2024</a>
+<a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/" target="_blank" class="transition-all text-gray-300 hover:text-white mb-4 md:mb-0">© Orkney Islands Council 2024</a>
 </footer>

@@ -1,6 +1,7 @@
 ---
 import Surprise from "./surprise.svelte";
 import Nav from "./nav.astro";
+import Nav2 from "./nav2.astro";
 
 const { fromColor, toColor, heroText, heroTagline } = Astro.props;
 ---
@@ -8,6 +9,7 @@ const { fromColor, toColor, heroText, heroTagline } = Astro.props;
     <div class="m-4 w-vw h-full rounded-2xl" style={`background: linear-gradient(to right, ${fromColor}, ${toColor})`}>
         <div class="size-full flex flex-col flex-wrap items-center place-content-between">
             <Nav />
+            <Nav2 />
             <div class="mx-4">
               <h1 transition:animate="slide" class="text-center font-orkney text-5xl md:text-9xl text-white">{heroText}</h1>
               <p class="text-balance text-center	text-white font-light text-lg md:text-4xl">{heroTagline}</p>

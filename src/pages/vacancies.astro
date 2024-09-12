@@ -5,8 +5,8 @@ import { fetchRssFeed } from '../utils/fetchRss.js';
 import RssCard from '../components/rssCard.astro';
 
 const pageTitle = "Vacancies";
-const fromColor = "#3838fc";
-const toColor = "#d1669b";
+const fromColor = "#d1669b";
+const toColor = "#3838fc";
 const rssUrl = 'https://myjobscotland.gov.uk/api/v1/rss?alias=councils/orkney-islands-council/jobs/rss';
 const items = await fetchRssFeed(rssUrl);
 const heroText = "find a role";

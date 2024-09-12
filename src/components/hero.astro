@@ -11,8 +11,8 @@ const { fromColor, toColor, heroText, heroTagline } = Astro.props;
             <Nav />
             <Nav2 />
             <div class="mx-4">
-              <h1 transition:animate="slide" class="text-center font-orkney text-5xl md:text-9xl text-white">{heroText}</h1>
-              <p class="text-balance text-center	text-white font-light text-lg md:text-4xl">{heroTagline}</p>
+              <h1 transition:animate="slide" class="drop-shadow-lg text-center font-orkney text-5xl md:text-9xl text-white">{heroText}</h1>
+              <p class="text-balance text-center drop-shadow-xl text-white font-light text-lg md:text-4xl">{heroTagline}</p>
             </div>
             <div><Surprise client:load/></div>
         </div>

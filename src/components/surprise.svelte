@@ -19,5 +19,5 @@
 </script>
 
 <div class="navbar">
-    <button class="group w-fit px-4 pb-1 rounded-full md:mb-4 md:text-2xl border-white border-solid border transition-all hover:transition-all hover:shadow-lg"><a class="text-white font-light transition-all group-hover:font-normal group-hover:drop-shadow-lg" href={randomLink} aria-label="Random job on MyJobScotland">surprise me</a></button>
+    <button class="group hover:scale-[1.05] w-fit px-4 pb-1 rounded-full md:mb-4 md:text-xl border-white border-solid border transition-all hover:transition-all hover:shadow-lg"><a class="text-white font-normal transition-all group-hover:drop-shadow-lg" href={randomLink} aria-label="Random job on MyJobScotland">surprise me</a></button>
 </div>

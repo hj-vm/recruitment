@@ -15,33 +15,33 @@ const cleanTitle = tag ? title.replace(` - ${tag}`, '').trim() : title;
 function getColors(title: string) {
     //ohac
   if (title.includes('Hamnavoe') || title.includes('Sunnybrae') || title.includes('Smiddybrae') || title.includes('St Rognvalds') || title.includes('Responder Service Co-ordinator') || title.includes('Mobile Community Responder') || title.includes('Therapist') || title.includes('Kalisgarth')  || title.includes('Care')  || title.includes('OHAC') || title.includes('Lifestyles') ) {
-    return { from: '#3838fc', to: '#191970' };
+    return { from: '#3838fc', to: '#191970', id: 'ohac' };
   } 
     //elh  
   else if (title.includes('Teacher') || title.includes('Relief Cook') || title.includes('Early Years') || title.includes('Centre Assistant') || title.includes('Employability') || title.includes('Outdoor Centre') || title.includes('Youth Worker') || title.includes('Instructor') || title.includes('Papdale Halls') || title.includes('Nursery') || title.includes('Nurseries') || title.includes('Learning') || title.includes('Education') || title.includes('Musuem') || title.includes('Cathedral') || title.includes('Housing') || title.includes('Library') || title.includes('School') || title.includes('College') || title.includes('University') || title.includes('Leisure') || title.includes('SVQ')) {
-    return { from: '#d70000', to: '#8b0000' };
+    return { from: '#d70000', to: '#8b0000', id: 'elh' };
   } 
     //nsi
   else if (title.includes('Fleet') || title.includes('Toilet') || title.includes('Engineer') || title.includes('Engineering') || title.includes('Cleaner')) {
-    return { from: '#e95500', to: '#9d3900' };
+    return { from: '#e95500', to: '#9d3900', id: 'nsi' };
   } 
     //spbs
     else if (title.includes('HR') || title.includes('Licensing') || title.includes('Solicitor') || title.includes('Communications')  || title.includes('Community Council')  || title.includes('Members')) {
-    return { from: '#b20059', to: '#660033' };
+    return { from: '#b20059', to: '#660033', id: 'spbs' };
   } 
     //esr
     else if (title.includes('System') || title.includes('IT')  || title.includes('Pier') || title.includes('Project Manager (Orkney World Heritage Site Gateway)') || title.includes('Finance')) {
-    return { from: '#00b000', to: '#006400' };
+    return { from: '#00b000', to: '#006400', id: 'esr' };
   } 
-    //fallback
+    //unknown
   else {
-    return { from: '#D9D9D9', to: '#D9D9D9' };
+    return { from: '#D9D9D9', to: '#D9D9D9', id: 'unknown' };
   }
 }
 
-const { from, to } = getColors(title);
+const { from, to, id } = getColors(title);
 ---
-<a href={link} target="_blank" rel="noopener noreferrer" class="card p-0 border rounded-lg hover:shadow-lg transition-all hover:scale-[1.02] flex flex-row">
+<a id={id} href={link} target="_blank" rel="noopener noreferrer" class="card p-0 border rounded-lg hover:shadow-lg transition-all hover:scale-[1.02] flex flex-row">
     <div class="w-3 border rounded-l-lg bg-gradient-to-b" style={`background: linear-gradient(to bottom, ${from}, ${to})`}/>
     <div class="flex flex-col p-4 w-full">
         <h2 class="text-[#1e1e1e] text-lg md:text-xl font-bold mb-2">{cleanTitle}</h2>
